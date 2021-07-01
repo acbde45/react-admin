@@ -1,0 +1,7 @@
+src/react-app-env.d.ts
+scripts/**
+config/**
+.eslintrc.js
+.prettierrc.js
+babel.config.js
+jest.config.js

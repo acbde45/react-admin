@@ -36,5 +36,4 @@ module.exports = {
     // We don't want unused vars
     '@typescript-eslint/no-unused-vars': ['error'],
   },
-  ignorePatterns: ['src/react-app-env.d.ts'],
 };
