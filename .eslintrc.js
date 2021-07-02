@@ -35,5 +35,7 @@ module.exports = {
     'react/prop-types': 'off',
     // We don't want unused vars
     '@typescript-eslint/no-unused-vars': ['error'],
+    // 不需要必须引入React在每个tsx文件里
+    'react/react-in-jsx-scope': 'off',
   },
 };

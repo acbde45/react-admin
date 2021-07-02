@@ -1,8 +1,8 @@
 import { css, Global } from '@emotion/react';
 import emotionNormalize from 'emotion-normalize';
-import React, { memo } from 'react';
+import * as React from 'react';
 
-const NormalizeStyle = memo(() => {
+const NormalizeStyle = React.memo(() => {
   const globalStyles = css`
     ${emotionNormalize}
   `;

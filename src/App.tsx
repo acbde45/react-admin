@@ -1,5 +1,4 @@
 import { ThemeProvider } from '@emotion/react';
-import React from 'react';
 
 import ReactBanner from '@/components/ReactBanner';
 import GlobalStyle from '@/style/global';

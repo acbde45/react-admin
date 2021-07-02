@@ -9,7 +9,6 @@ module.exports = function (api) {
   api.cache(true);
 
   return {
-    presets: ['react-app'],
-    plugins: ['@emotion'],
+    presets: ['react-app', '@emotion/babel-preset-css-prop'],
   };
 };

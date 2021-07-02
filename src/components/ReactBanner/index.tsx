@@ -1,6 +1,5 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import React from 'react';
 
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { increment, selectCount } from '@/store/reducers/counter';

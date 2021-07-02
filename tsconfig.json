@@ -2,11 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,20 +12,15 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "types": [
-      "@types/webpack-env",
-      "@emotion/react/types/css-prop",
-    ],
+    "types": ["node", "react", "react-dom", "@types/webpack-env", "@emotion/react/types/css-prop", "jest"],
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
       "@/*": ["src/*"],
-      "@images/*": ["public/images/*"],
-    }, 
+      "@images/*": ["public/images/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
