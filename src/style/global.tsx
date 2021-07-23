@@ -1,34 +1,23 @@
-import { css, Global, useTheme } from '@emotion/react';
+import { css, Global } from '@emotion/react';
 
-import { Theme } from './theme';
-
-function GlobalStyle(): JSX.Element {
-  const theme = useTheme() as Theme;
-
-  const globalStyles = css`
-    html,
-    body {
-      padding: 0;
-      margin: 0;
-      font-family: ${theme.fonts.sans};
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.5;
-      color: ${theme.colors.text};
+export default function GlobalStyles(): JSX.Element | null {
+  const styles = css`
+    html {
+      height: '100%',
+      width: '100%',
     }
-    html,
-    body,
-    #root {
-      width: 100%;
-      height: 100%;
+    body {
+      height: '100%',
+      width: '100%',
     }
     a {
-      color: ${theme.colors.text};
-      text-decoration: none;
+      textDecoration: 'none',
+    }
+    #root {
+      height: '100%',
+      width: '100%',
     }
   `;
 
-  return <Global styles={globalStyles} />;
+  return <Global styles={styles} />;
 }
-
-export default GlobalStyle;

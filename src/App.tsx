@@ -1,16 +1,22 @@
-import { ThemeProvider } from '@emotion/react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { useRoutes } from 'react-router-dom';
 
-import ReactBanner from '@/components/ReactBanner';
-import GlobalStyle from '@/style/global';
-import NormalizeStyle from '@/style/normalize';
-import theme from '@/style/theme';
+import Pace from '@/components/Pace';
+
+import routes from './routes';
+import GlobalStyles from './style/global';
+import theme from './style/theme';
 
 export default function App(): JSX.Element {
+  const routing = useRoutes(routes);
+
   return (
     <ThemeProvider theme={theme}>
-      <NormalizeStyle />
-      <GlobalStyle />
-      <ReactBanner />
+      <CssBaseline />
+      <GlobalStyles />
+      <Pace color={theme.palette.primary.light} />
+      {routing}
     </ThemeProvider>
   );
 }

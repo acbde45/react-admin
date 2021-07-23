@@ -25,13 +25,13 @@ module.exports = {
   endOfLine: 'lf',
 
   // 设置为true时,将多行JSX元素的 > 放在最后一行的末尾，而不是单独放在下一行
-  /* 
+  /*
     <button
        className="prettier-class"
        id="prettier-id"
        onClick={this.handleClick}>
        Click Here
-    </button> 
+    </button>
      */
   // 设置为false时
   /*

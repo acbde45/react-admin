@@ -10,5 +10,17 @@ module.exports = function (api) {
 
   return {
     presets: ['react-app', '@emotion/babel-preset-css-prop'],
+    // plugins: [
+    //   [
+    //     'babel-plugin-import',
+    //     {
+    //       libraryName: '@material-ui/core',
+    //       // Use "'libraryDirectory': ''," if your bundler does not support ES modules
+    //       libraryDirectory: 'esm',
+    //       camel2DashComponentName: false,
+    //     },
+    //     'core',
+    //   ],
+    // ],
   };
 };
