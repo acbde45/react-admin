@@ -212,7 +212,7 @@ function Login(): JSX.Element {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '84%',
+          height: 'calc(100% - 92px)',
           minHeight: 450,
         }}
       >
@@ -221,7 +221,7 @@ function Login(): JSX.Element {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            pb: 1,
+            pb: 2,
           }}
           variant="outlined"
         >
