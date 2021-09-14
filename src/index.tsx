@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import store from '@/store';
 
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,4 +19,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorker.unregister();
+serviceWorkerRegistration.register({} as any);
