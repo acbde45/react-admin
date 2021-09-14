@@ -1,5 +1,4 @@
 import * as React from 'react';
-// @ts-ignore
 import { IMaskInput } from 'react-imask';
 
 interface IProps {
@@ -13,19 +12,18 @@ const PhoneNumberMaskInputCustom = React.forwardRef<HTMLInputElement, IProps>(fu
   ref: any
 ) {
   const { name, onChange, ...other } = props;
+  const maskInputProps: any = {
+    ...other,
+    mask: '#00-0000-0000',
+    definitions: {
+      '#': /1/,
+    },
+    inputRef: ref,
+    onAccept: (value: any) => onChange({ target: { name, value } }),
+    overwrite: true,
+  };
 
-  return (
-    <IMaskInput
-      {...other}
-      mask="#00-0000-0000"
-      definitions={{
-        '#': /1/,
-      }}
-      inputRef={ref}
-      onAccept={(value: any) => onChange({ target: { name, value } })}
-      overwrite
-    />
-  );
+  return <IMaskInput {...maskInputProps} />;
 });
 
 const memoized = React.memo(PhoneNumberMaskInputCustom);

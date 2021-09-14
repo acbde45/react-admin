@@ -10,7 +10,7 @@ const routes = [
     element: <DashboardLayout />,
     children: [
       { path: 'home', element: <Home /> },
-      { path: '/', element: <Navigate to="/app/home" /> },
+      { path: '', element: <Navigate to="/app/home" /> },
       { path: '*', element: <Navigate to="/app/home" /> },
     ],
   },

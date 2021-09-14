@@ -1,9 +1,5 @@
 import * as React from 'react';
-
-/* @ts-ignore */
 import { IMaskInput } from 'react-imask';
-
-/* tslint:enable */
 
 interface IProps {
   onChange: (event: { target: { name: string; value: string } }) => void;
@@ -16,16 +12,15 @@ const CaptchaMaskInputCustom = React.forwardRef<HTMLInputElement, IProps>(functi
   ref: any
 ) {
   const { name, onChange, ...other } = props;
+  const maskInputProps: any = {
+    ...other,
+    mask: '000000',
+    inputRef: ref,
+    onAccept: (value: any) => onChange({ target: { name, value } }),
+    overwrite: true,
+  };
 
-  return (
-    <IMaskInput
-      {...other}
-      mask="000000"
-      inputRef={ref}
-      onAccept={(value: any) => onChange({ target: { name, value } })}
-      overwrite
-    />
-  );
+  return <IMaskInput {...maskInputProps} />;
 });
 
 const memoized = React.memo(CaptchaMaskInputCustom);

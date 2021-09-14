@@ -64,5 +64,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     // 对于某些第三方库没有ts declaration，允许使用@ts-ignore
     '@typescript-eslint/ban-ts-comment': 'off',
+    // 关闭对拓展名的检查，因为存在bug
+    'import/extensions': 'off',
   },
 };
