@@ -18,8 +18,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "@/*": ["src/*"],
-      "@images/*": ["public/images/*"]
+      "@/*": ["src/*"]
     }
   },
   "include": ["src"]

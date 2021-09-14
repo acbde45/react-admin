@@ -22,20 +22,20 @@ function Pace(props: IProps): JSX.Element | null {
     <Global
       styles={css`
         .pace {
-          pointerEvents: 'none',
-          userSelect: 'none',
+          pointer-events: none;
+          user-select: none;
         }
         .pace-inactive {
-          display: 'none',
+          display: none;
         }
         .pace .pace-progress {
-          background: ${color || null},
-          position: 'fixed',
-          zIndex: 2000,
-          top: 0,
-          right: '100%',
-          width: '100%',
-          height: '2px',
+          background: ${color || null};
+          position: fixed;
+          z-index: 2000;
+          top: 0;
+          right: 100%;
+          width: 100%;
+          height: 2px;
         }
       `}
     />

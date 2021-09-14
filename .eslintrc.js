@@ -66,5 +66,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     // 关闭对拓展名的检查，因为存在bug
     'import/extensions': 'off',
+    // 可以使用console
+    'no-console': 'off',
   },
 };
