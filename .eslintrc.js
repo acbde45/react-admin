@@ -8,15 +8,7 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['react', '@typescript-eslint', 'prettier'],
-  extends: [
-    'airbnb-typescript',
-    'airbnb/hooks',
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', 'prettier', 'plugin:prettier/recommended'],
   env: {
     browser: true,
     jasmine: true,
@@ -28,10 +20,16 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
-    // 不强求a标签的href属性
-    'jsx-a11y/anchor-is-valid': 'off',
+    // 关闭对拓展名的检查，因为存在bug
+    'import/extensions': 'off',
+    // 可以使用console
+    'no-console': 'off',
     // 不能使用 ++ 的方式自增
     'no-plusplus': 'off',
+    // 标识符中可以有悬空下划线
+    'no-underscore-dangle': 'off',
+    // 可以使用按位操作符
+    'no-bitwise': 'off',
     // 函数参数不能修改
     'no-param-reassign': 'off',
     // 可以使用hasOwnProperty方法
@@ -64,9 +62,5 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     // 对于某些第三方库没有ts declaration，允许使用@ts-ignore
     '@typescript-eslint/ban-ts-comment': 'off',
-    // 关闭对拓展名的检查，因为存在bug
-    'import/extensions': 'off',
-    // 可以使用console
-    'no-console': 'off',
   },
 };
