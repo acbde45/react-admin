@@ -24,3 +24,7 @@ yarn-error.log*
 
 # vscode debugger产生的文件
 .vscode/chrome
+
+# lock file
+package-lock.json
+yarn.lock
